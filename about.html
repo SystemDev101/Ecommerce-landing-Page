@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - PandaWorldClothing</title>
+    <title>Panda World Clothing - About Us</title>
     <style>
         * {
             margin: 0;
@@ -13,129 +13,196 @@
         }
 
         body {
-            line-height: 1.6;
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            background-color: #ffff;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
             color: #333;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+        .nav-links {
+            display: flex;
+            gap: 2rem;
         }
 
-        nav {
-            background: radial-gradient(white,blue);
-            padding: 20px 0;
-            text-align: right;
-        }
-
-        nav a {
-            color: white;
+        .nav-links a {
             text-decoration: none;
-            margin: 0 20px;
+            color: #333;
         }
 
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin-top: 40px;
+        .main-content {
+            max-width: 1200px;
+            margin: 100px auto 0;
+            padding: 2rem;
         }
 
-        .brand-story {
-            padding-right: 40px;
-        }
-
-        .brand-story h4{
-            color: blue;
-        }
-
-        .brand-image {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        footer {
-            background: #03011d;
-            color: white;
+        .hero-section {
             text-align: center;
-            padding: 20px 0;
-            margin-top: auto;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            padding: 4rem 0;
+            background: linear-gradient(rgb(65, 62, 250), rgb(255, 255, 255)),
+                        url('https://images.unsplash.com/photo-1605467885551-fb23b8e3a5fb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            color: rgb(0, 0, 0);
         }
 
-        /* Responsive Design */
+        .founders-section {
+            padding: 4rem 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .founder-card {
+            background: linear-gradient(rgb(71, 39, 253),white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .founder-card img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+        .back-button {
+        display: inline-block;
+        padding: 0.8rem 1.5rem;
+        background-color: rgb(1, 1, 59);
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        margin: 2rem 0;
+        transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+        background-color: #1b0bff;
+        }
+
+        .footer {
+            background: #03011d;
+            color: #8a8a8a;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
         @media (max-width: 768px) {
-            .about-content {
-                grid-template-columns: 1fr;
-                gap: 30px;
-                padding: 0 15px;
+            .nav-links {
+                display: none;
             }
 
-            .brand-story {
-                padding-right: 0;
+            .burger-menu {
+                display: block;
+                cursor: pointer;
             }
 
-            nav {
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: white;
+                padding: 1rem;
                 text-align: center;
-                padding: 15px 0;
-            }
-
-            nav a {
-                margin: 0 10px;
-                padding: 5px 15px;
-                display: inline-block;
-            }
-
-            .container {
-                padding: 15px;
-            }
-
-            body {
-                line-height: 1.5;
-            }
-
-            .brand-image {
-                margin-top: 30px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             }
         }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="contact.html">Contact Us</a>
-    </nav>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <img src="Images/Logo.png" width="125px">
+            </div>
+            <div class="nav-links">
+            </div>
+            <div class="burger-menu"></div>
+        </nav>
+    </header>
 
-    <div class="container">
-        <div class="about-content">
-            <d class="brand-story">
-                <h2>Our Story</h2>
-                <p>Panda World Clothing was founded in 2020 with a passion for creating clothing style that combines Street wear and Hip Hop. Our journey began in Lebowakgomo and has since grown into a brand that values Quality and Uniquieness.</p>
-                
-                <h2>Our Mission</h2>
-                <p>Our mission is to provide clothing that help our customers during the four seasons without compromise. We believe in equality and strive to make fashion accessible and inspiring.</p>
+    <main class="main-content">
+        <section class="hero-section">
+            <h1>Welcome to Panda World Clothing</h1>
+            <p>Where Comfort Meets Style</p>
+        </section>
 
-                <h2>Founders</h2>
-
-                <h4>Albert Lebese</h4>
-                <h4>Tshepiso Lebese</h4>
-                <h4>Motheo Mangwale</h3>
+        <section class="founders-section">
+            <div class="founder-card">
+                <img src="Images/Director-1.png" alt="Tshephang">
+                <h2>Tshephang Lebese</h2>
+                <p class="title">Co-Founder & Creative Director</p>
+                <p>Tshephang Lebese is the creative force behind Panda World Clothing. With a passion for innovative design and a keen eye for detail, Tshephang brings the brand's vision to life through unique clothing collections.</p>
             </div>
 
-            <div class="brand-image">
-                <img src="Images/Ad Logo.png" alt="Brand Image">
+            <div class="founder-card">
+                <img src="Images/Director-2.png" alt="Tshepiso">
+                <h2>Tshepiso Lebese</h2>
+                <p class="title">Co-Founder & Operations Director</p>
+                <p>Tshepiso Lebese handles the operational aspects of Panda World Clothing. His strategic thinking and business acumen have been instrumental in building the brand's presence in the market.</p>
             </div>
-        </div>
-    </div>
 
-    <footer>
-        <p>© 2025 PandaWorldClothing. All rights reserved.</p>
+            <div class="founder-card">
+                <img src="Images/Director-3.png" alt="Motheo">
+                <h2>Motheo Mangwale</h2>
+                <p class="title">Co-Founder & Operations Tech Director</p>
+                <p>Motheo Mangwale handles the technical aspects of Panda World Clothing. His strategic thinking and technical
+                    acumen have been instrumental in building the brand's presence in the market through technology.</p>
+            </div>
+            <!-- Add this button right after the main content section -->
+            <div class="back-button-container" style="text-align: center;">
+                <a href="index.html" class="back-button">Back</a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Panda World Clothing. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const burgerMenu = document.querySelector('.burger-menu');
+            const navLinks = document.querySelector('.nav-links');
+
+            burgerMenu.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', function() {
+                    navLinks.classList.remove('active');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
+
